@@ -12,34 +12,107 @@
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <title>Garfield Meme Token</title>
     <style>
-        body { background-color: #FFA500; color: #fff; font-family: Arial, sans-serif; text-align: center; }
-        .content { padding: 20px; }
-        .links img { width: 40px; margin: 10px; }
-        .address { margin-top: 20px; }
-        .disclaimer { margin-top: 20px; font-size: 0.9em; }
+        body {
+            background-image: url('d7h42y1-52a15b21-3009-48fe-a96a-06aaf7fa50a7.png'); /* Replace with your Garfield image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center top -70px; /* Adjust background position */
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Full height */
+            position: relative; /* Position relative to the viewport */
+        }
+
+        h1 {
+            position: absolute;
+            bottom: 150px; /* Distance from the bottom */
+            right: 120px; /* Distance from the right */
+            color: #973903;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .copy-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #81500c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .copy-btn:hover {
+            background-color: #2b2221;
+        }
+
+        .social-buttons {
+            position: absolute;
+            bottom: 70px; /* Distance from the bottom */
+            right: 280px; /* Distance from the right */
+        }
+
+        .social-buttons a {
+            text-decoration: none; /* Remove blue underscore lines */
+        }
+
+        .social-buttons img {
+            height: 50px; /* Set the height */
+            width: auto; /* Maintain aspect ratio */
+            margin-left: 2px; /* Add left margin for spacing */
+            margin-right: 20px; /* Add right margin for spacing */
+            cursor: pointer;
+        }
+
+        .social-buttons img.telegram {
+            height: 45px; /* Smaller height for Telegram logo */
+            margin-left: 15px; /* Adjust left margin for better spacing */
+            margin-right: 15px; /* Adjust right margin for better spacing */
+        }
+
+        .disclaimer {
+            position: absolute;
+            bottom: 10px; /* Distance from the bottom */
+            left: 10px; /* Distance from the left */
+            color: white;
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
-    <div class="content">
-        <h1>Garfield Meme Token</h1>
-        <img src="garfield_image.png" alt="Garfield">
-        <p>Welcome to the Garfield Meme Token. This is a fun and community-driven token with no financial guarantees.</p>
-        <div class="links">
-            <a href="https://twitter.com/garfieldtoken" target="_blank" rel="noopener noreferrer"><img src="twitter_icon.png" alt="Twitter"></a>
-            <a href="https://discord.com/invite/garfieldtoken" target="_blank" rel="noopener noreferrer"><img src="discord_icon.png" alt="Discord"></a>
-            <a href="https://telegram.me/garfieldtoken" target="_blank" rel="noopener noreferrer"><img src="telegram_icon.png" alt="Telegram"></a>
-        </div>
-        <div class="address">
-            <span>Token Contract: 0x5E824fdE19450... <button onclick="copyAddress()">Copy</button></span>
-        </div>
-        <div class="disclaimer">
-            <p><strong>Disclaimer:</strong> Investing in cryptocurrencies involves risk. Please do your own research before making any investment decisions.</p>
-        </div>
+    <div class="container">
+        <h1>0xc200f0863dcb4a9931101f8a9680d0007b1b22af<br>
+        0x5E824fdE19450e712dE69556084fd23A06fC0680<br>
+        <button class="copy-btn" onclick="copyToClipboard()">Copy</button></h1>
+    </div>
+    <div class="social-buttons">
+        <a href="https://x.com/GarfieldBaseCat" target="_blank" rel="noopener noreferrer">
+            <img src="2fb909b74a854f0715e64dda5825990d-removebg-preview (1).png" alt="Twitter">
+        </a>
+        <a href="https://dexscreener.com/" target="_blank" rel="noopener noreferrer">
+            <img src="dexscreener-removebg-preview (2).png" alt="DEXScreener">
+        </a>
+        <a href="https://t.me/+wmppjLy38nQ1ZGVk" target="_blank" rel="noopener noreferrer">
+            <img class="telegram" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+        </a>
+    </div>
+    <div class="disclaimer">
+        <p><strong>Disclaimer:</strong> Investing in cryptocurrencies involves risk. Please do your own research before making any investment decisions.</p>
     </div>
     <script>
-        function copyAddress() {
-            navigator.clipboard.writeText('0x5E824fdE19450...');
-            alert('Address copied to clipboard!');
+        function copyToClipboard() {
+            const value1 = '0xc200f0863dcb4a9931101f8a9680d0007b1b22af';
+            const value2 = '0x5E824fdE19450e712dE69556084fd23A06fC0680';
+            navigator.clipboard.writeText(value1 + '\n' + value2).then(() => {
+                alert('Copied to clipboard: ' + value1 + '\n' + value2);
+            }).catch(err => {
+                console.error('Error copying to clipboard: ', err);
+            });
         }
     </script>
 </body>
